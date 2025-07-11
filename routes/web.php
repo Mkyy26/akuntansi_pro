@@ -4,10 +4,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AccountingPeriodController;
 use App\Http\Controllers\CashBankController;
+use App\Http\Controllers\GuruController;
+use App\Http\Controllers\JadwalGuruController;
 use App\Http\Controllers\JournalEntryController;
 use App\Http\Controllers\LedgerController;
+use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\SuplierController;
 use App\Http\Controllers\UnitController;
+use App\Models\Suplier;
 
 Route::get('/', function () {
     return view('frontend');
@@ -51,5 +57,15 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/periode-akuntansi', AccountingPeriodController::class)->except(['show']);
     Route::resource('units', UnitController::class);
+    
+    Route::resource('siswa', SiswaController::class);
+    Route::resource('guru', GuruController::class);
+    Route::resource('jadwal-guru', JadwalGuruController::class);
+    Route::resource('produk', ProdukController::class);
+    Route::resource('/Daftar-suplier', SuplierController::class);
+
+
+
+    
 
 });

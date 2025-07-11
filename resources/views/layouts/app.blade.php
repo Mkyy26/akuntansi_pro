@@ -109,6 +109,18 @@
                             <li><a class="dropdown-item" href="{{ route('units.index') }}">Unit / Departemen</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuMaster" data-bs-toggle="dropdown">
+                            Data Akademik Sekolah
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('siswa.index') }}">Daftar Siswa</a></li>
+                            <li><a class="dropdown-item" href="{{ route('guru.index') }}">Daftar Guru</a></li>
+                            <li><a class="dropdown-item" href="{{ route('jadwal-guru.index') }}">Jadwal Guru</a></li>
+                            <li><a class="dropdown-item" href="{{ route('produk.index') }}">Daftar Produk</a></li>
+                            <li><a class="dropdown-item" href="{{ route('Daftar-suplier.index') }}">Daftar Suplier</a></li>
+                        </ul>
+                    </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="menuLaporan" data-bs-toggle="dropdown">
